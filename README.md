@@ -44,53 +44,70 @@ fase2-blog/
   ```npm install```
 
 3. Crie um arquivo .env:
-```
-  PORT=3000
-  MONGO_URI=mongodb://localhost:27017/fase2blog
-```
+   ```
+   PORT=3000
+   MONGO_URI=mongodb://localhost:27017/fase2blog
+   ```
 
 4. Inicie o MongoDB local e rode:
 ```npm run dev```
 
-🐳 Rodando com Docker (Recomendado)
+
+## 🐳 Rodando com Docker (Recomendado)
 Certifique-se de que você tem o Docker Desktop instalado.
 
 Rode os containers:
 ```docker-compose up --build```
+
 A API estará disponível em: http://localhost:3000/posts
 
-✅ Testes Automatizados
+
+## ✅ Testes Automatizados
 Execute os testes com:
 ```npm test```
+
 Isso irá:
 Validar os principais endpoints
+
 Gerar um relatório de cobertura mínimo de 20%
 
-🔁 CI/CD com GitHub Actions
+
+## 🔁 CI/CD com GitHub Actions
 Os testes são executados automaticamente no GitHub Actions a cada push ou pull request na branch main
+
 O MongoDB roda em container na cloud
+
 Status e cobertura são exibidos na aba Actions do repositório
+
 Workflow configurado em:
+
 .github/workflows/test.yml
 
-📌 Endpoints da API
+## 📌 Endpoints da API
 Método	Rota	Descrição
+
 GET	/posts	Lista todos os posts
+
 GET	/posts/:id	Busca um post por ID
+
 GET	/posts/search?q=xxx	Busca por palavra-chave
+
 POST	/posts	Cria novo post
+
 PUT	/posts/:id	Atualiza um post
+
 DELETE	/posts/:id	Deleta um post
 
-📦 Corpo do POST/PUT
+
+## 📦 Corpo do POST/PUT
 ```
 {
-  "titulo": "Título do post",
-  "conteudo": "Conteúdo completo",
-  "autor": "Nome do professor"
+   "titulo": "Título do post",
+   "conteudo": "Conteúdo completo",
+   "autor": "Nome do professor"
 }
 ```
 
-👨‍🏫 Autor
+## 👨‍🏫 Autor
 Projeto desenvolvido por Cristovam Nunes Alves
 como parte da Fase 2 do Tech Challenge da FIAP.
